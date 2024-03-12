@@ -111,7 +111,7 @@ function Footer() {
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2024 Copyright :
         <a className='fw-bold text-danger' href='https://mdbootstrap.com/' style={{textDecoration:'none'}}>
-           Media Player. Build With React
+           EKART
         </a>
       </div>
     </MDBFooter>

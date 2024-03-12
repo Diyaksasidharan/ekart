@@ -8,7 +8,7 @@ function Header() {
   const cart = useSelector((state)=>state.cartReducer)
   return (
     <>
-    <Navbar style={{zIndex:"1"}} expand="lg" className="bg-dark">
+    <Navbar style={{ zIndex: '1', position: 'fixed', width: '100%', top: '0', backgroundColor: '#333' }} expand="lg" className="bg-dark">
       <Container>
         <Navbar.Brand><Link to={'/'} style={{color:'#eef2e2',textDecoration:'none',fontWeight:'bold'}}><i class="fa-solid fa-cart-shopping me-2"></i>E-Kart</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

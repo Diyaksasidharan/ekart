@@ -1,16 +1,39 @@
 import React from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Button, Card, Col, Row, Spinner  } from 'react-bootstrap'
 import useFetch from '../Hooks/useFetch';
 import { useDispatch } from 'react-redux';
 import { addToWishlist } from '../redux/slice/wishlistslice';
 import { addToCart } from '../redux/slice/cartSlice';
 
 function Home() {
-  const data = useFetch("https://dummyjson.com/products")
+  const data= useFetch("https://dummyjson.com/products")
   // console.log(data);
 
   const dispatch = useDispatch()
+
+  
   return (
+<>
+    <div
+        style={{
+          backgroundImage: 'url("https://cdn.pixabay.com/photo/2020/05/20/15/05/shopping-cart-5196903_1280.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          padding: '0 20px',
+        }}
+      >
+        <div>
+          <h1 style={{color:"red",fontFamily:"monospace",fontWeight:"40px"}}>Explore Popular Products</h1>
+          <p style={{color:"black",fontFamily:"cursive"}}>Save upto 50% off on All products!!!</p>
+          <Button variant="danger" style={{borderRadius:"10%"}}>Get Started</Button>
+        </div>
+      </div>
+  
+
+
     <Row className='ms-5' style={{marginTop:"100px"}}>
       {
         data?.length>0?data?.map((product,index)=>(
@@ -35,6 +58,7 @@ function Home() {
       }
 
     </Row>
+    </>
   )
 }
 
